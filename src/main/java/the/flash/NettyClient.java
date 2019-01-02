@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
  * @author 闪电侠
  */
 public class NettyClient {
+    // 默认重试 5 次
     private static final int MAX_RETRY = 5;
-
 
     public static void main(String[] args) {
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -41,7 +41,7 @@ public class NettyClient {
                 });
 
         // 4.建立连接
-        connect(bootstrap, "juejin.im", 80, MAX_RETRY);
+        connect(bootstrap, "localhost", 8000, MAX_RETRY);
     }
 
     private static void connect(Bootstrap bootstrap, String host, int port, int retry) {
