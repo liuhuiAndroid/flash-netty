@@ -24,6 +24,7 @@ public class NettyServer {
                 .childOption(ChannelOption.TCP_NODELAY, true)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     protected void initChannel(NioSocketChannel ch) {
+                        // 给服务端添加一个逻辑处理器，这个处理器的作用就是负责读取客户端来的数据
                         ch.pipeline().addLast(new FirstServerHandler());
                     }
                 });
