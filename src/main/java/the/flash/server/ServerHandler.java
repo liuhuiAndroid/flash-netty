@@ -44,7 +44,14 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         }
     }
 
+    /**
+     * 校验用户名密码逻辑
+     *
+     * @param loginRequestPacket
+     * @return
+     */
     private boolean valid(LoginRequestPacket loginRequestPacket) {
         return true;
     }
+
 }
