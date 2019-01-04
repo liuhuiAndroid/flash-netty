@@ -12,6 +12,7 @@ import java.nio.charset.Charset;
  * @date 2018/08/04 06:23.
  */
 public class FirstClientHandler extends ChannelInboundHandlerAdapter {
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         for (int i = 0; i < 1000; i++) {
